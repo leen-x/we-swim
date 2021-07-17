@@ -10,7 +10,9 @@ import io.netty.channel.EventLoopGroup;
 import io.netty.channel.nio.NioEventLoopGroup;
 import io.netty.channel.socket.SocketChannel;
 import io.netty.channel.socket.nio.NioServerSocketChannel;
+import lombok.extern.slf4j.Slf4j;
 
+@Slf4j
 public class NettyServer {
 
     public void bind(int port) throws Exception {
@@ -36,7 +38,7 @@ public class NettyServer {
         ChannelFuture future = sb.bind(port).sync();
 
         if (future.isSuccess()) {
-            System.out.println("服务端启动成功");
+            log.info("服务端启成功");
         } else {
             System.out.println("服务端启动失败");
             future.cause().printStackTrace();

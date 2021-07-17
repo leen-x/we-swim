@@ -18,10 +18,11 @@ public class Client {
         Scanner scanner = new Scanner(System.in);
         System.out.println("🎉欢迎使用we-swim (quit 回车 退出)");
         System.out.println("请输入用户名:");
-        String name = "gongben";
+        String name = scanner.nextLine();
         System.out.println("请输入密码:");
-        String password = "gongben123";
-        NettyClient client = new NettyClient("127.0.0.1", 8080);
+        String password = scanner.nextLine();
+        //  123.60.21.129
+        NettyClient client = new NettyClient("127.0.0.1", 10001);
         //启动client服务
         client.start();
         Channel channel = client.getChannel();

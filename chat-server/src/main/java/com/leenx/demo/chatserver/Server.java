@@ -14,7 +14,7 @@ public class Server {
     public static void main(String[] args) throws Exception {
         // timerInit();
         // 启动server服务
-        new NettyServer().bind(8080);
+        new NettyServer().bind(10001);
     }
 
     private static void timerInit() {
