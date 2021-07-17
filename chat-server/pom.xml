@@ -66,7 +66,7 @@
           </descriptorRefs>
           <archive>
             <manifest>
-              <mainClass>com.leenx.demo.chatclient.Client</mainClass>
+              <mainClass>com.leenx.demo.chatserver.Server</mainClass>
             </manifest>
           </archive>
         </configuration>
