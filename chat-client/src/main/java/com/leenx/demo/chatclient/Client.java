@@ -22,7 +22,8 @@ public class Client {
         System.out.println("请输入密码:");
         String password = scanner.nextLine();
         //  123.60.21.129
-        NettyClient client = new NettyClient("127.0.0.1", 10001);
+        NettyClient client = new NettyClient("123.60.21.129", 10001);
+//        NettyClient client = new NettyClient("127.0.0.1", 10001);
         //启动client服务
         client.start();
         Channel channel = client.getChannel();
